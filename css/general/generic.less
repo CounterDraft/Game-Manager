@@ -1,0 +1,44 @@
+@import "tools";
+.round,
+.min-round {
+    background: white;
+    padding: 0;
+    overflow: hidden;
+    .border-radius(50%);
+    .box-shadow(0px 1px 0px 0.3);
+}
+
+.round {
+    height: 40px;
+    width: 40px;
+}
+
+.min-round {
+    height: 25px;
+    width: 25px;
+}
+
+//error messages;
+#msg-dialog {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    .addTransition();
+    &.active {
+        max-height: 500px;
+        opacity: 1;
+    }
+    position: fixed;
+    top: 55px;
+    left: 12%;
+    right: 12%;
+    z-index: 100;
+    i.modal-close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 2em;
+        color: @color-secondary-3;
+        cursor: pointer;
+    }
+}

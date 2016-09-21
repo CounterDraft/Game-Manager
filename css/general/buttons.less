@@ -1,0 +1,121 @@
+// tertiary,quaternary, quinary, senary, septenary, octonary, nonary, and denary
+//styling for action button
+.primary {
+    &.btn {
+        .box-shadow(-1px, 0, 2px, 0.2);
+        .text-shadow(-1px, 0, 0, 0.2);
+        .border-radius();
+        .gradient(top, @clientColorGreen, darken(@clientColorGreen, 20%));
+        .text-size-larger;
+        color: white !important;
+        height: 50px;
+        border: none;
+        &:hover {
+            opacity: .8;
+        }
+        i {
+            position: relative;
+            top: 3px;
+        }
+        // @media screen and (max-width: @bootstrap-med) {
+        //     .text-size-small;
+        // }
+    }
+}
+
+.model-secondary {
+    &.btn-modal {
+        font-size: 35px;
+        color: white !important;
+        border: none;
+        opacity: 1;
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+
+.secondary {
+    &.btn {
+        .border-radius();
+        .box-shadow(-1px, 0, 2px, 0.2);
+        // .text-shadow(-1px, 0, 0, 0.2);
+        // .gradient(top, @clientColorLightestGray, darken(@clientColorLightestGray, 20%));
+        .text-size-larger;
+        background-color: @color-secondary-0;
+        color: white !important;
+        border: none;
+        height: 50px;
+        &:hover {
+            opacity: .8;
+        }
+    }
+    // @media screen and (max-width: @bootstrap-med) {
+    //         .text-size-small;
+    //     }
+}
+
+//styling for nav buttons
+.tertiary {
+    &.btn {
+        .box-shadow(-1px, 0, 2px, 0.2);
+        .border-radius();
+        height: 40px;
+        padding: .3em;
+        .text-size-larger;
+        border: none;
+        color: white;
+        i {
+            color: white;
+        }
+        background-color: @color-secondary-0;
+        &:hover {
+            opacity: .8;
+            color: white;
+        }
+    }
+}
+
+a.quaternary,
+button.quaternary {
+    padding: 0 20px;
+    height: 40px;
+    background: @clientColorLightGray;
+    color: black;
+    cursor: auto;
+    .text-size-larger;
+    @media screen and (max-width: @bootstrap-med) {
+        .text-size-small;
+    }
+}
+
+.btn.quinary {
+    padding: 0px 10px;
+    font-size: 50px;
+    color: @color-secondary-0;
+    opacity: 1;
+    background: @clientColorLightGray;
+    cursor: auto;
+    z-index: 10;
+    .box-shadow();
+    .border-radius(40px);
+    &:hover, &:focus  {
+        opacity: .8;
+        color: @color-secondary-4;
+        outline:0px !important;
+        -webkit-appearance:none;
+    }
+
+    
+    // @media screen and (max-width: @bootstrap-med) {
+    //     .text-size-small;
+    // }
+}
+
+.btn.nmb {
+    margin-bottom: 0;
+}
+
+a.btn {
+    padding: .5em;
+}

@@ -1,0 +1,100 @@
+//general
+@import "general/tools";
+@import "general/fonts";
+@import "general/nav";
+@import "general/images";
+@import "general/footer";
+@import "general/buttons";
+@import "general/modal";
+@import "general/generic";
+@import "general/alerts";
+
+/*libs*/
+@import "libs/bootstrap";
+@import "libs/off-canvas";
+@import "libs/sweetalert";
+
+/*pages*/
+@import "pages/login";
+@import "pages/dashboard";
+@import "pages/profile";
+@import "pages/admin";
+@import "pages/password";
+@import "pages/reports";
+
+
+body {
+    background-color: @clientColorLightestGray;
+}
+
+//only for login page;
+body.login-background {
+	.addImage("login-fantasy-football-small.jpg", center, cover);
+}
+
+article#counterdraft-main{
+    min-height: @app-body-min-height;
+}
+
+fieldset.counter-widget{
+	.not-box-shadow();
+	position: relative;
+	padding: 0;
+	padding-top: 53px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	legend{
+		margin: 0;
+		position: absolute;
+		top: 0;
+		background-color: @color-secondary-3;
+		border: 1px solid @color-secondary-3;
+		.text-color-white;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		padding: .5em;
+	}
+}
+
+
+div, span, li, small, input, button, a{
+ .font-default;
+}
+
+input,
+select,
+textarea,
+fieldset {
+    .border-radius();
+}
+
+select,
+textarea,
+fieldset {
+    .box-shadow();
+    border: 1px solid @bootstrap-input-border-color;
+}
+
+input[type="text"][readonly] {
+    background-color: white;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+input[type="search"],
+input[type="email"],
+select {
+    height: 40px !important;
+}
+
+div.cd-alert{
+    display: none;
+} 
+
+.center{
+    text-align: center;
+}
+

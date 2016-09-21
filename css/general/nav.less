@@ -1,0 +1,107 @@
+@import "tools";
+nav.counter-nav {
+    padding: .3em;
+    background-color: @color-secondary-3;
+    border: none;
+    margin: 0;
+    .user-container,
+    .balance-container {
+        min-height: 50px;
+        padding: .4em;
+        * {
+            .welcome-message;
+        }
+        background: @color-secondary-0;
+        .border-radius();
+        padding-top: .2em;
+        .container-name {
+            margin-top: 5px;
+        }
+        .box-shadow();
+    }
+    .balance-container {
+        padding: .8em;
+    }
+    .navbar-header {
+        @media screen and (max-width: @bootstrap-med) {
+            padding: .5em;
+        }
+    }
+    .navbar-brand {
+        * {
+            .page-title;
+            font-weight: bold;
+            color: white;
+        }
+    }
+    .navbar-toggle {
+        border: none!important;
+        .box-shadow();
+        &:hover,
+        &:focus {
+            background-color: @color-primary-4;
+            ;
+        }
+        .icon-bar {
+            background-color: white;
+            border: none!important;
+        }
+    }
+}
+
+#counter-side-menu {
+    margin-top: 10px;
+    @media screen and (max-width: @bootstrap-med) {
+            margin-top: 60px;
+        }
+}
+
+div#js-bootstrap-offcanvas {
+    padding: 0;
+    .border-radius();
+    div.off-canvas-list {
+        padding: 0;
+        a.off-canvas-list-item {
+            padding-top: 1em;
+            padding-bottom: 1em;
+            opacity: .9;
+            .modal-list-item;
+            .box-shadow();
+            background-color: lighten(@off-canvas-menu-background-color, 25%);
+            list-style: none;
+            &:hover,
+            &:focus {
+                text-decoration: none;
+                opacity: 1;
+                background-color: darken(@off-canvas-menu-background-color, 10%);
+            }
+        }
+    }
+    i.glyphicon {
+        font-size: 20px;
+    }
+    a.link-dashboard{
+        color: @color-home;
+    }
+    a.link-add-game{
+        color: @color-game;
+    }
+    a.link-add-patron{
+        color: @color-patron;
+    }
+    a.link-my-account{
+        color: @color-my-account;
+    }
+    a.link-organization-settings{
+        color: @color-organization-settings;
+    }
+    a.link-reports{
+        color: @color-reports;
+    }
+    a.link-settings{
+        color: @color-settings;
+    }
+    a.link-logout{
+        color: @color-logout;
+    }
+}

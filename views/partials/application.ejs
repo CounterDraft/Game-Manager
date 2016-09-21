@@ -1,0 +1,29 @@
+<% if(environment  === 'production'){ %>
+   <script type="text/javascript" src="build/js/min/<%= npm_package_name %>.min.js"></script>
+ <% } else{ %>  
+	<script type="text/javascript" src="/node_modules/jquery/dist/jquery.js"></script>
+	<script type="text/javascript" src="/node_modules/offcanvas-bootstrap/dist/js/bootstrap.offcanvas.min.js"></script>
+	<script type="text/javascript" src="/node_modules/d3/build/d3.min.js"></script>
+	<script type="text/javascript" src="/node_modules/angular/angular.min.js"></script>
+	<script type="text/javascript" src="/node_modules/sweetalert/dist/sweetalert.min.js"></script>
+	<script type="text/javascript" src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+	<script type="text/javascript" src="/js/app.js"></script>
+	<script type="text/javascript" src="/js/directives.js"></script>
+	<script type="text/javascript" src="/js/controllers/account-controller.js"></script>
+	<script type="text/javascript" src="/js/controllers/dashboard-controller.js"></script>
+	<script type="text/javascript" src="/js/controllers/patron-controller.js"></script>
+	<script type="text/javascript" src="/js/controllers/game-controller.js"></script>
+	<script type="text/javascript" src="/js/controllers/reports-controller.js"></script>
+  	<script type="text/javascript" src="/js/common.js"></script>
+<% } %>
+<script type="text/javascript">
+	//loads page data to angular;
+	if(window['app']){
+		var data = <%- JSON.stringify(data) %> || "";
+		app.value("data", data);
+	}
+	$(document).ready(function() { 
+
+	});
+</script>
