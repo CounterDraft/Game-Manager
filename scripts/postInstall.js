@@ -11,16 +11,4 @@ try {
     console.error('No local configurations found in config/ Error=' + JSON.stringify(err));
     config = require('../config/master_config');
 }
-
-if (config.environment === 'development') {
-    console.log('Running post install for development.');
-    return;
-}
-
-if (config.environment === 'production') {
-    console.log('Running post install for production.');
-    return;
-}
-
-console.error('No task for environment:', config.environment);
 process.exit(1);
